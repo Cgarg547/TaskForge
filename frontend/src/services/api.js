@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000"
+const API_URL = import.meta.env.VITE_API_URL || ""
 
 export async function fetchWithAuth(endpoint, getToken, options={}) {
     const token = await getToken()
