@@ -4,7 +4,7 @@ import Layout from "./components/Layout.jsx"
 import HomePage from "./pages/HomePage.jsx";
 import SignInPage from "./pages/SignInPage.jsx";
 import SignUpPage from "./pages/SignUp.jsx";
-import DashboardPage from "./pages/DashboardPage.jsx";
+import DashboardPage from "./pages/DashBoardPage.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
 
 function ProtectedRoute({children}) {
