@@ -9,7 +9,11 @@ function formatTaskDate(dateString) {
         return "";
     }
 
-    const date = new Date(dateString);
+    const hasTimezone = /(?:Z|[+-]\d{2}:\d{2})$/.test(dateString);
+
+    const date = new Date(
+        hasTimezone ? dateString : `${dateString}Z`
+);
 
     if (Number.isNaN(date.getTime())) {
         return "";
