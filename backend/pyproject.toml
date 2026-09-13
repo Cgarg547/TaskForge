@@ -3,7 +3,7 @@ name = "backend"
 version = "0.1.0"
 description = "B2B FastAPI backend"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = "~=3.12.0"
 dependencies = [
     "alembic>=1.16.5",
     "clerk-backend-api>=2.1.0",
