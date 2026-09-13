@@ -85,3 +85,5 @@ pnpm-debug.log*
 # Agent / local tooling
 .agents/
 skills-lock.json
+.vercel
+.env*
