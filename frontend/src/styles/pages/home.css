@@ -1,0 +1,256 @@
+/* =========================================
+   Home Page
+========================================= */
+
+.home-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px 60px;
+  text-align: center;
+}
+
+
+/* =========================================
+   Badge
+========================================= */
+
+.home-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  margin-bottom: 28px;
+  border: 1px solid rgba(51, 65, 85, 0.9);
+  border-radius: 999px;
+  background: rgba(30, 41, 59, 0.55);
+  color: var(--color-slate-300);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.home-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-emerald-400);
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.65);
+}
+
+
+/* =========================================
+   Hero
+========================================= */
+
+.home-title {
+  max-width: 900px;
+  margin: 0 auto var(--spacing-6);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  font-weight: 800;
+}
+
+.home-title-accent {
+  color: var(--color-emerald-400);
+}
+
+.home-subtitle {
+  max-width: 680px;
+  margin: 0 auto var(--spacing-8);
+  color: var(--color-slate-400);
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   Buttons
+========================================= */
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 72px;
+}
+
+.home-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.home-buttons .btn:hover {
+  transform: translateY(-2px);
+}
+
+.home-buttons .btn-primary {
+  background: var(--color-emerald-500);
+  color: white;
+  border: 1px solid var(--color-emerald-500);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.18);
+}
+
+.home-buttons .btn-primary:hover {
+  background: var(--color-emerald-600);
+  border-color: var(--color-emerald-600);
+}
+
+.home-buttons .btn-outline {
+  background: rgba(30, 41, 59, 0.5);
+  color: white;
+  border: 1px solid var(--color-slate-600);
+}
+
+.home-buttons .btn-outline:hover {
+  background: rgba(51, 65, 85, 0.65);
+  border-color: var(--color-slate-500);
+}
+
+
+/* =========================================
+   Feature Cards
+========================================= */
+
+.home-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.home-feature-card {
+  padding: 26px;
+  border: 1px solid var(--color-slate-700);
+  border-radius: 18px;
+  background: rgba(30, 41, 59, 0.42);
+  transition:
+    transform var(--transition-default),
+    border-color var(--transition-default),
+    background-color var(--transition-default);
+}
+
+.home-feature-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-slate-600);
+  background: rgba(30, 41, 59, 0.7);
+}
+
+.home-feature-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--color-emerald-400);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.home-feature-card h3 {
+  margin: 0 0 8px;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.home-feature-card p {
+  margin: 0;
+  color: var(--color-slate-400);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+
+/* =========================================
+   Trust Section
+========================================= */
+
+.home-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 42px;
+  color: var(--color-slate-500);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   Organization Creation
+========================================= */
+
+.home-create-org {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 72px;
+}
+
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width: 800px) {
+  .home-container {
+    padding: 60px 20px 48px;
+  }
+
+  .home-title {
+    font-size: clamp(2.6rem, 10vw, 4rem);
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+
+  .home-features {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .home-container {
+    padding: 44px 16px 40px;
+  }
+
+  .home-title {
+    font-size: 2.6rem;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 52px;
+  }
+
+  .home-buttons .btn {
+    width: 100%;
+  }
+
+  .home-trust {
+    flex-wrap: wrap;
+  }
+}

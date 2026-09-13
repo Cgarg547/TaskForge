@@ -1,0 +1,146 @@
+/* =========================================
+   Authentication Pages
+========================================= */
+
+.auth-container {
+  min-height: calc(100vh - 72px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 70px 24px 80px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(16, 185, 129, 0.07),
+      transparent 38%
+    );
+}
+
+
+/* =========================================
+   Auth Brand
+========================================= */
+
+.auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  margin-bottom: 28px;
+}
+
+.auth-brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 11px;
+
+  background: var(--color-emerald-500);
+  color: white;
+
+  font-size: 1.2rem;
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 24px rgba(16, 185, 129, 0.2);
+}
+
+.auth-brand-name {
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.auth-brand-subtitle {
+  margin-top: 2px;
+
+  color: var(--color-slate-500);
+
+  font-size: 0.68rem;
+}
+
+
+/* =========================================
+   Auth Heading
+========================================= */
+
+.auth-heading {
+  width: 100%;
+  max-width: 420px;
+
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+.auth-heading h1 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 1.65rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.auth-heading p {
+  margin: 7px 0 0;
+
+  color: var(--color-slate-400);
+
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   Clerk Component
+========================================= */
+
+.auth-container .cl-rootBox {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-container .cl-card {
+  width: 100%;
+
+  border: 1px solid var(--color-slate-700);
+
+  border-radius: 16px;
+
+  background: #111827;
+
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 600px) {
+  .auth-container {
+    min-height: calc(100vh - 60px);
+
+    padding: 45px 16px 60px;
+  }
+
+  .auth-brand {
+    margin-bottom: 22px;
+  }
+
+  .auth-heading h1 {
+    font-size: 1.45rem;
+  }
+}

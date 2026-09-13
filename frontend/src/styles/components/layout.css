@@ -1,0 +1,362 @@
+/* =========================================
+   App Shell
+========================================= */
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  background: var(--color-slate-950);
+  color: white;
+}
+
+
+/* =========================================
+   Sidebar
+========================================= */
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 23, 42, 0.96);
+  border-right: 1px solid var(--color-slate-700);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar-header {
+  padding: var(--spacing-6);
+  border-bottom: 1px solid var(--color-slate-800);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  color: white;
+  font-size: var(--text-xl);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: white;
+}
+
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    135deg,
+    var(--color-emerald-500),
+    var(--color-emerald-400)
+  );
+  color: white;
+  box-shadow:
+    0 8px 20px rgba(16, 185, 129, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* Checkmark */
+
+.brand-check {
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* Task lines */
+
+.brand-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.brand-lines span {
+  display: block;
+  width: 7px;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+
+/* =========================================
+   Sidebar Content
+========================================= */
+
+.sidebar-content {
+  flex: 1;
+  padding: var(--spacing-6) var(--spacing-4);
+  overflow-y: auto;
+}
+
+.sidebar-section {
+  margin-bottom: var(--spacing-6);
+}
+
+.sidebar-label {
+  margin: 0 0 var(--spacing-2);
+  padding-left: var(--spacing-2);
+  color: var(--color-slate-500);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-4);
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: 0.7rem 0.8rem;
+  border-radius: var(--radius-lg);
+  color: var(--color-slate-300);
+  text-decoration: none;
+  font-weight: 500;
+  transition:
+    background-color var(--transition-default),
+    color var(--transition-default),
+    transform var(--transition-default);
+}
+
+.sidebar-link:hover {
+  background: rgba(51, 65, 85, 0.55);
+  color: white;
+}
+
+.sidebar-link.active {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--color-emerald-400);
+}
+
+.sidebar-icon {
+  width: 20px;
+  display: inline-flex;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+
+/* =========================================
+   Organization Switcher
+========================================= */
+
+.org-switcher {
+  width: 100%;
+  border: 1px solid var(--color-slate-700);
+  border-radius: var(--radius-lg);
+  background: rgba(30, 41, 59, 0.75);
+  color: white;
+}
+
+.org-switcher:hover {
+  background: rgba(51, 65, 85, 0.8);
+}
+
+.org-name {
+  color: white;
+}
+
+
+/* =========================================
+   Sidebar Footer
+========================================= */
+
+.sidebar-footer {
+  padding: var(--spacing-4);
+  border-top: 1px solid var(--color-slate-800);
+}
+
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: 0.5rem;
+}
+
+.user-label {
+  color: var(--color-slate-300);
+  font-size: 0.9rem;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+}
+
+.auth-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.sidebar-signup {
+  display: block;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-emerald-500);
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--transition-default);
+}
+
+.sidebar-signup:hover {
+  background: var(--color-emerald-600);
+}
+
+
+/* =========================================
+   Main Area
+========================================= */
+
+.main-area {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================
+   Top Bar
+========================================= */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--color-slate-800);
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(14px);
+}
+
+.topbar-content {
+  min-height: 72px;
+  padding: 0 var(--spacing-8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar-subtitle {
+  color: var(--color-slate-500);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.topbar-link {
+  color: var(--color-slate-300);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--transition-default);
+}
+
+.topbar-link:hover {
+  color: white;
+}
+
+
+/* =========================================
+   Page Content
+========================================= */
+
+.page-content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--spacing-8);
+  flex: 1;
+}
+
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .page-content {
+    padding: var(--spacing-6);
+  }
+
+  .topbar-content {
+    padding: 0 var(--spacing-6);
+  }
+}
+
+
+@media (max-width: 700px) {
+  .app-shell {
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid var(--color-slate-700);
+  }
+
+  .sidebar-header {
+    padding: var(--spacing-4);
+  }
+
+  .sidebar-content {
+    padding: var(--spacing-3) var(--spacing-4);
+  }
+
+  .sidebar-section {
+    margin-bottom: var(--spacing-3);
+  }
+
+  .sidebar-nav {
+    margin-top: var(--spacing-3);
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+
+  .topbar {
+    position: relative;
+  }
+
+  .topbar-content {
+    min-height: 60px;
+    padding: 0 var(--spacing-4);
+  }
+
+  .page-content {
+    padding: var(--spacing-4);
+  }
+}

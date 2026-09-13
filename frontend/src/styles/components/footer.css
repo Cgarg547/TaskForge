@@ -1,0 +1,209 @@
+/* =========================================
+   App Footer
+========================================= */
+
+.app-footer {
+    margin-top: auto;
+    border-top: 1px solid var(--color-slate-700);
+    background: rgba(15, 23, 42, 0.72);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 42px 32px 34px;
+}
+
+/* Brand */
+
+.footer-brand-section {
+    min-width: 0;
+}
+
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 750;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+}
+
+.footer-brand-mark {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: linear-gradient(
+        135deg,
+        var(--color-emerald-500),
+        var(--color-emerald-400)
+    );
+    color: white;
+    box-shadow:
+        0 6px 18px rgba(16, 185, 129, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.footer-brand-check {
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.footer-brand-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.footer-brand-lines span {
+    display: block;
+    width: 6px;
+    height: 2px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.footer-description {
+    max-width: 300px;
+    margin: 14px 0 20px;
+    color: var(--color-slate-500);
+    font-size: 0.78rem;
+    line-height: 1.6;
+}
+
+/* Social Links */
+
+.footer-socials {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--color-slate-700);
+    border-radius: 9px;
+    background: rgba(30, 41, 59, 0.6);
+    color: var(--color-slate-300);
+    font-size: 0.72rem;
+    font-weight: 750;
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.footer-social-link:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-slate-600);
+    background: rgba(51, 65, 85, 0.7);
+    color: white;
+}
+
+/* Footer Columns */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.footer-column h3 {
+    margin: 0 0 8px;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 750;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.footer-column a,
+.footer-column span {
+    color: var(--color-slate-500);
+    font-size: 0.75rem;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.footer-column a {
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-column strong {
+    margin-top: -2px;
+    color: var(--color-slate-200);
+    font-size: 0.82rem;
+    font-weight: 650;
+}
+
+/* Bottom */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 32px;
+    border-top: 1px solid rgba(51, 65, 85, 0.65);
+    color: var(--color-slate-600);
+    font-size: 0.68rem;
+}
+
+.footer-bottom span:last-child {
+    color: var(--color-slate-500);
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand-section {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 34px 20px 28px;
+    }
+
+    .footer-brand-section {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 20px;
+        gap: 7px;
+    }
+}

@@ -1,0 +1,394 @@
+/* =========================================
+   Modal Overlay
+========================================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(2, 6, 23, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  animation: modalOverlayIn 0.2s ease-out;
+}
+
+
+/* =========================================
+   Modal
+========================================= */
+
+.modal {
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: #111827;
+  border: 1px solid var(--color-slate-700);
+  border-radius: 16px;
+
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.45),
+    0 8px 24px rgba(0, 0, 0, 0.25);
+
+  animation: modalIn 0.22s ease-out;
+}
+
+
+/* =========================================
+   Modal Header
+========================================= */
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+
+  padding: 22px 24px;
+
+  border-bottom: 1px solid var(--color-slate-700);
+}
+
+.modal-eyebrow {
+  margin-bottom: 5px;
+
+  color: var(--color-emerald-400);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.modal-title {
+  margin: 0;
+
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 750;
+  letter-spacing: -0.015em;
+}
+
+.modal-subtitle {
+  margin-top: 5px;
+
+  color: var(--color-slate-500);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  background: transparent;
+  color: var(--color-slate-400);
+
+  font-size: 1.3rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.modal-close:hover {
+  background: rgba(71, 85, 105, 0.35);
+  border-color: var(--color-slate-700);
+  color: white;
+}
+
+
+/* =========================================
+   Form
+========================================= */
+
+.modal form {
+  padding: 24px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.form-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--color-slate-200);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.form-hint {
+  display: block;
+
+  margin-top: 6px;
+
+  color: var(--color-slate-500);
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   Inputs
+========================================= */
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+
+  padding: 11px 12px;
+
+  border: 1px solid var(--color-slate-700);
+  border-radius: 9px;
+
+  background: #0f172a;
+  color: white;
+
+  font-family: inherit;
+  font-size: 0.82rem;
+  line-height: 1.5;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.form-input:hover,
+.form-textarea:hover,
+.form-select:hover {
+  border-color: var(--color-slate-600);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+
+  border-color: var(--color-emerald-500);
+
+  background: #111c30;
+
+  box-shadow:
+    0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-slate-600);
+}
+
+.form-textarea {
+  min-height: 120px;
+
+  resize: vertical;
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+
+  cursor: pointer;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, #64748b 50%),
+    linear-gradient(135deg, #64748b 50%, transparent 50%);
+
+  background-position:
+    calc(100% - 15px) 50%,
+    calc(100% - 10px) 50%;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+}
+
+
+/* =========================================
+   Form Actions
+========================================= */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 24px;
+  padding-top: 18px;
+
+  border-top: 1px solid var(--color-slate-700);
+}
+
+.form-actions .btn {
+  min-height: 40px;
+  padding: 0 16px;
+
+  border-radius: 9px;
+
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.form-actions .btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   Scrollbar
+========================================= */
+
+.modal::-webkit-scrollbar {
+  width: 7px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: var(--color-slate-700);
+  border-radius: 999px;
+}
+
+
+/* =========================================
+   Animations
+========================================= */
+
+@keyframes modalOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 600px) {
+  .modal-overlay {
+    align-items: flex-end;
+    padding: 12px;
+  }
+
+  .modal {
+    max-height: 92vh;
+    border-radius: 16px;
+  }
+
+  .modal-header {
+    padding: 18px;
+  }
+
+  .modal form {
+    padding: 18px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   Loading Button
+========================================= */
+
+.button-spinner {
+  width: 14px;
+  height: 14px;
+
+  display: inline-block;
+
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+
+  animation: buttonSpin 0.7s linear infinite;
+}
+
+.form-actions .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.form-actions .btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.modal-close:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.form-input:disabled,
+.form-textarea:disabled,
+.form-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@keyframes buttonSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}

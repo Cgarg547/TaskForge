@@ -1,0 +1,400 @@
+/* =========================================
+   Dashboard Page
+========================================= */
+
+.dashboard-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+
+/* =========================================
+   Dashboard Header
+========================================= */
+
+.dashboard-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.dashboard-eyebrow {
+  margin-bottom: 6px;
+  color: var(--color-emerald-400);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dashboard-title {
+  margin: 0 0 6px;
+  color: white;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.dashboard-subtitle {
+  margin: 0;
+  color: var(--color-slate-400);
+  font-size: 0.95rem;
+}
+
+
+/* =========================================
+   Organization Meta
+========================================= */
+
+.dashboard-org-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 1px solid var(--color-slate-700);
+  border-radius: 14px;
+  background: rgba(30, 41, 59, 0.5);
+}
+
+.member-avatar-stack {
+  display: flex;
+  align-items: center;
+}
+
+.member-avatar {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  color: var(--color-emerald-400);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.member-count {
+  display: block;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.member-label {
+  display: block;
+  margin-top: 2px;
+  color: var(--color-slate-500);
+  font-size: 0.7rem;
+}
+
+
+/* =========================================
+   Statistics
+========================================= */
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.stat-card {
+  padding: 20px;
+  border: 1px solid var(--color-slate-700);
+  border-radius: 16px;
+  background: rgba(30, 41, 59, 0.42);
+  transition:
+    transform var(--transition-default),
+    border-color var(--transition-default),
+    background-color var(--transition-default);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-slate-600);
+  background: rgba(30, 41, 59, 0.65);
+}
+
+.stat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stat-label {
+  color: var(--color-slate-400);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.stat-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-emerald-400);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.stat-value {
+  margin-top: 14px;
+  color: white;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.stat-description {
+  margin-top: 9px;
+  color: var(--color-slate-500);
+  font-size: 0.75rem;
+}
+
+
+/* =========================================
+   Task Board Header
+========================================= */
+
+.task-board-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.task-board-title {
+  margin: 0 0 4px;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.task-board-subtitle {
+  margin: 0;
+  color: var(--color-slate-500);
+  font-size: 0.85rem;
+}
+
+.task-board-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 11px;
+  border: 1px solid var(--color-slate-700);
+  border-radius: 999px;
+  color: var(--color-slate-400);
+  background: rgba(15, 23, 42, 0.45);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-emerald-400);
+  box-shadow: 0 0 9px rgba(52, 211, 153, 0.6);
+}
+
+
+/* =========================================
+   Kanban Wrapper
+========================================= */
+
+.dashboard-board-wrapper {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid var(--color-slate-700);
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.35);
+}
+
+
+/* =========================================
+   Loading
+========================================= */
+
+.dashboard-loading {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border: 1px solid var(--color-slate-700);
+  border-radius: 18px;
+  background: rgba(30, 41, 59, 0.3);
+  color: var(--color-slate-400);
+}
+
+.loading-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--color-slate-700);
+  border-top-color: var(--color-emerald-400);
+  border-radius: 50%;
+  animation: dashboard-spin 0.8s linear infinite;
+}
+
+@keyframes dashboard-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   No Organization
+========================================= */
+
+.no-org-container {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.no-org-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 18px;
+  background: var(--color-emerald-500);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.18);
+}
+
+.no-org-title {
+  margin-bottom: 12px;
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.no-org-text {
+  max-width: 480px;
+  margin-bottom: 28px;
+  color: var(--color-slate-400);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   Error
+========================================= */
+
+.card-error {
+  padding: 22px;
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  border-radius: 16px;
+  background: rgba(127, 29, 29, 0.12);
+}
+
+.text-muted {
+  color: var(--color-slate-400);
+}
+
+.text-error {
+  color: var(--color-red-400);
+}
+
+.text-error-title {
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.text-error-message {
+  margin-bottom: 16px;
+  font-size: var(--text-sm);
+}
+
+
+/* =========================================
+   Legacy Plan Classes
+========================================= */
+
+.plan-pro {
+  color: var(--color-emerald-400);
+}
+
+.plan-free {
+  color: var(--color-slate-400);
+}
+
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width: 1100px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 800px) {
+  .dashboard-container {
+    padding: 24px 0;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+  }
+
+  .dashboard-org-meta {
+    width: 100%;
+  }
+
+  .task-board-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-board-wrapper {
+    padding: 12px;
+  }
+}
+
+
+@media (max-width: 560px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-title {
+    font-size: 2rem;
+  }
+
+  .dashboard-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .dashboard-board-wrapper {
+    padding: 8px;
+    border-radius: 14px;
+  }
+}
